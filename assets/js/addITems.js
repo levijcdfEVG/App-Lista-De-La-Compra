@@ -22,14 +22,25 @@ function updateTable() {
     const table = document.getElementById("groceryTable");
     table.innerHTML = ""; // Clear the table before adding rows
 
-    groceryList.forEach((item) => {
+    groceryList.forEach((item, index) => {
         const row = `<tr>
             <td>${item.type}</td>
             <td>${item.name}</td>
             <td>${item.quantity}</td>
+            <td><button onclick="deleteItem(${index})">Eliminar</button></td>
         </tr>`;
         table.innerHTML += row;
     });
+}
+
+function deleteItem(index) {
+    groceryList.splice(index, 1); // Remove item from array
+    updateTable(); // Update the table
+}
+
+function clearTable() {
+    groceryList = []; // Clear the list
+    document.getElementById("groceryTable").innerHTML = ""; // Clear the HTML table
 }
 
 function exportToJson() {
@@ -56,9 +67,4 @@ function importFromJson() {
         };
         reader.readAsText(file);
     };
-}
-
-function clearTable() {
-    groceryList = []; // Clear the list
-    document.getElementById("groceryTable").innerHTML = ""; // Clear the HTML table
 }
