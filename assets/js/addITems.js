@@ -58,3 +58,7 @@ function importFromJson() {
     };
 }
 
+function clearTable() {
+    groceryList = []; // Clear the list
+    document.getElementById("groceryTable").innerHTML = ""; // Clear the HTML table
+}
