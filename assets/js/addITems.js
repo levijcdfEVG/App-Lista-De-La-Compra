@@ -1,5 +1,4 @@
-'use strict';
-
+// app.js
 let groceryList = [];
 
 function addItem() {
@@ -27,7 +26,7 @@ function updateTable() {
             <td>${item.type}</td>
             <td>${item.name}</td>
             <td>${item.quantity}</td>
-            <td><button onclick="deleteItem(${index})">Eliminar</button></td>
+            <td><button onclick="deleteItem(${index})">${languages[currentLanguage].deleteButton}</button></td>
         </tr>`;
         table.innerHTML += row;
     });
