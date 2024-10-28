@@ -1,5 +1,3 @@
-'use strict'
-
 // language.js
 const languages = {
     en: {
@@ -11,7 +9,8 @@ const languages = {
         exportButton: "Export to JSON",
         importButton: "Import JSON",
         clearButton: "Clear Table",
-        deleteButton: "Delete"
+        deleteButton: "Delete",
+        tableHeaders: ["Type", "Product Name", "Quantity", "Actions"]
     },
     es: {
         title: "Lista de Compras",
@@ -22,7 +21,8 @@ const languages = {
         exportButton: "Exportar a JSON",
         importButton: "Importar JSON",
         clearButton: "Limpiar Tabla",
-        deleteButton: "Eliminar"
+        deleteButton: "Eliminar",
+        tableHeaders: ["Tipo", "Nombre del Producto", "Cantidad", "Acciones"]
     },
     pt: {
         title: "Lista de Compras",
@@ -33,7 +33,8 @@ const languages = {
         exportButton: "Exportar para JSON",
         importButton: "Importar JSON",
         clearButton: "Limpar Tabela",
-        deleteButton: "Eliminar"
+        deleteButton: "Eliminar",
+        tableHeaders: ["Tipo", "Nome do Produto", "Quantidade", "Ações"]
     }
 };
 
@@ -49,6 +50,12 @@ function updateLanguage(language) {
     document.getElementById("exportButton").textContent = languages[language].exportButton;
     document.getElementById("importButton").textContent = languages[language].importButton;
     document.getElementById("clearButton").textContent = languages[language].clearButton;
+
+    // Update table headers
+    const headers = languages[language].tableHeaders;
+    document.querySelectorAll("th").forEach((th, index) => {
+        th.textContent = headers[index];
+    });
 
     updateTable(); // Refresh table to update the delete button text
 }
