@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras</title>
+</head>
+<body>
+    <h2>Lista de Compras</h2>
+    <div>
+        <input id="itemName" type="text" placeholder="Nombre del Producto">
+        <input id="itemQty" type="number" placeholder="Cantidad">
+        <button onclick="addItem()">Añadir Producto</button>
+        <button onclick="exportToJson()">Exportar a JSON</button>
+        <button onclick="importFromJson()">Importar JSON</button>
+        <input type="file" id="fileInput" style="display: none;">
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre del Producto</th>
+                <th>Cantidad</th>
+            </tr>
+        </thead>
+        <tbody id="groceryTable"></tbody>
+    </table>
+
+    <script src="app.js"></script>
+</body>
+</html>
