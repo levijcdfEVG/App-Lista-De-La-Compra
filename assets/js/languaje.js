@@ -1,3 +1,5 @@
+'use strict'
+
 // language.js
 const languages = {
     en: {
