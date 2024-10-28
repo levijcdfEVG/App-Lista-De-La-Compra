@@ -20,3 +20,11 @@ input, button {
     padding: 8px;
     margin: 5px;
 }
+
+@media (max-width: 1152px){
+    button, input{
+        display: block;
+        margin: auto;
+        margin-top: 10px;
+    }
+}
