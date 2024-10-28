@@ -1,0 +1,19 @@
+[
+    { "type": "Fruta", "name": "Bananas", "quantity": 2 },
+    { "type": "Higiene", "name": "Gel baño coco", "quantity": 1 },
+    { "type": "Bebida", "name": "Água das pedras", "quantity": 1 },
+    { "type": "Otros", "name": "Azeitonas", "quantity": 1 },
+    { "type": "Bebida", "name": "Bebida de soja", "quantity": 1 },
+    { "type": "Limpieza", "name": "Limpa óculos", "quantity": 1 },
+    { "type": "Panadería", "name": "Pão", "quantity": 1 },
+    { "type": "Higiene", "name": "Champô anticaspa", "quantity": 1 },
+    { "type": "Carne", "name": "Carne moída", "quantity": 1 },
+    { "type": "Carne", "name": "Peito de frango", "quantity": 1 },
+    { "type": "Carne", "name": "Peitos frango", "quantity": 1 },
+    { "type": "Lácteos", "name": "Leite", "quantity": 1 },
+    { "type": "Lácteos", "name": "Queijo ilha", "quantity": 1 },
+    { "type": "Lácteos", "name": "Queijo ralado", "quantity": 1 },
+    { "type": "Carne", "name": "Peito peru", "quantity": 1 },
+    { "type": "Carne", "name": "Peitos perú", "quantity": 1 },
+    { "type": "Lácteos", "name": "Manteiga Matinal", "quantity": 1 }
+]
