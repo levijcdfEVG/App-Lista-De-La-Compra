@@ -7,24 +7,39 @@
     <title>Lista de Compras</title>
 </head>
 <body>
-    <h2>Lista de Compras</h2>
-    <div>
-        <input id="itemName" type="text" placeholder="Nombre del Producto">
-        <input id="itemQty" type="number" placeholder="Cantidad">
-        <button onclick="addItem()">Añadir Producto</button>
-        <button onclick="exportToJson()">Exportar a JSON</button>
-        <button onclick="importFromJson()">Importar JSON</button>
-        <input type="file" id="fileInput" style="display: none;">
-    </div>
-    <table>
-        <thead>
-            <tr>
-                <th>Nombre del Producto</th>
-                <th>Cantidad</th>
-            </tr>
-        </thead>
-        <tbody id="groceryTable"></tbody>
-    </table>
+    <body>
+        <h2>Lista de Compras</h2>
+        <div>
+            <select id="itemType">
+                <option value="Fruta">Fruta</option>
+                <option value="Verdura">Verdura</option>
+                <option value="Lácteos">Lácteos</option>
+                <option value="Carne">Carne</option>
+                <option value="Panadería">Panadería</option>
+                <option value="Bebida">Bebida</option>
+                <option value="Otros">Otros</option>
+            </select>
+            <input id="itemName" type="text" placeholder="Nombre del Producto">
+            <input id="itemQty" type="number" placeholder="Cantidad">
+            <button onclick="addItem()">Añadir Producto</button>
+            <button onclick="exportToJson()">Exportar a JSON</button>
+            <button onclick="importFromJson()">Importar JSON</button>
+            <input type="file" id="fileInput" style="display: none;">
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tipo</th>
+                    <th>Nombre del Producto</th>
+                    <th>Cantidad</th>
+                </tr>
+            </thead>
+            <tbody id="groceryTable"></tbody>
+        </table>
+    
+        <script src="app.js"></script>
+    </body>
+    </html>
 
     <script src="assets/js/addITems.js"></script>
 </body>
