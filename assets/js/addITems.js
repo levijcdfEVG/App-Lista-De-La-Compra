@@ -3,11 +3,12 @@
 let groceryList = [];
 
 function addItem() {
+    const itemType = document.getElementById("itemType").value;
     const itemName = document.getElementById("itemName").value;
     const itemQty = document.getElementById("itemQty").value;
 
     if (itemName && itemQty) {
-        const item = { name: itemName, quantity: itemQty };
+        const item = { type: itemType, name: itemName, quantity: parseInt(itemQty) };
         groceryList.push(item);
         updateTable();
         document.getElementById("itemName").value = '';
@@ -19,9 +20,14 @@ function addItem() {
 
 function updateTable() {
     const table = document.getElementById("groceryTable");
-    table.innerHTML = "";
-    groceryList.forEach((item, index) => {
-        const row = `<tr><td>${item.name}</td><td>${item.quantity}</td></tr>`;
+    table.innerHTML = ""; // Clear the table before adding rows
+
+    groceryList.forEach((item) => {
+        const row = `<tr>
+            <td>${item.type}</td>
+            <td>${item.name}</td>
+            <td>${item.quantity}</td>
+        </tr>`;
         table.innerHTML += row;
     });
 }
@@ -51,3 +57,4 @@ function importFromJson() {
         reader.readAsText(file);
     };
 }
+
